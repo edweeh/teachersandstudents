@@ -2,19 +2,25 @@ import logo from './logo.svg';
 import './App.css';
 import Read from './components/Read';
 import Teach from './components/Teach';
+import Addstud from './components/Addstud';
+import { BrowserRouter,Route,Routes} from 'react-router-dom';
+import Navbar from './components/Navbar';
+
 
 function App() {
   return (
     <div className='App'>
-      <BrowserRouter>
-      <Bar></Bar>
+     <BrowserRouter>
+      
+   
+      <Navbar></Navbar>
+ 
       <Routes>
-        <Route path='/' elements={<Teach></Teach>}></Route>
-        <Route path='/students' elements={<Read></Read>}></Route>
-        <Route path='/teachers' elements={<Teach></Teach>}></Route>
+        <Route path='/st' element={<Read></Read>}></Route>
+        <Route path='/add' element={<Addstud></Addstud>}></Route>
+        <Route path='/teach' element={<Teach></Teach>}></Route>
       </Routes>
       </BrowserRouter>
-
 
   </div>
   );

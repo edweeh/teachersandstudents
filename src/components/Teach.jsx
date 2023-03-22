@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 const Teach = () => {
     var [teachers, setteachers] = useState([])
     useEffect(() => {
-      axios.get("http://localhost:3005/teachers")
+      axios.get(" http://localhost:3006/teachers")
         .then(response => {
           console.log(response.data)
           setteachers(teachers = response.data)
@@ -14,6 +14,9 @@ const Teach = () => {
     }, []);
     return (
       <div>
+        <br></br>
+        <br></br>
+        <br></br>
         <Button color="inherit" variant="outlined"><Link to='/students' 
         style={{color:'white', textDecoration:'none'}}>Students</Link></Button>
         <TableContainer>
