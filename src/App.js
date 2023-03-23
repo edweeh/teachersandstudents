@@ -16,9 +16,9 @@ function App() {
       <Navbar></Navbar>
  
       <Routes>
-        <Route path='/st' element={<Read></Read>}></Route>
-        <Route path='/add' element={<Addstud></Addstud>}></Route>
-        <Route path='/teach' element={<Teach></Teach>}></Route>
+        <Route path='/' element={<Read></Read>}></Route>
+        <Route path='/add' element={<Addstud data={{id: '', name: '', grade: ''}} method='post' />}></Route>
+        {/* <Route path='/teach' element={<Teach></Teach>}></Route> */}
       </Routes>
       </BrowserRouter>
 
